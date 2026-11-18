@@ -11,7 +11,7 @@ This is a Python Script that can be used in Fontlab 8/9. It batch changes the Fi
 
 
 
-# Dalgas Preview Panel
+# Dalgas_Preview Panel
 Fontlab 8/9에서 사용할 수 있는 Python Script입니다.  
 폰트랩의 Font Info > Instances에 설정된 정보를 읽어 인터폴레이션 미리보기와 모든 마스터 글자보기를 수행합니다.
 특히 인터폴레이션 미리보기는 Font Info > Instances에 설정 모든 인스턴스에 대해 미리보기가 가능합니다.
@@ -33,11 +33,11 @@ Developed collaboratively by a human, FontLab App, Claude, and Codex. TypeRig mu
 
 ### Key Features
 
-- **Horizontal mode:** Compare all masters side by side or preview only the instances defined in `Font Info > Instances`, rather than FontLab’s fixed interpolation steps. Regular interpolation follows the Weight axis; `Ctrl/Command` or `Alt/Option`+click on the Interpolation button shows registered instances across all axes. 
-![Dalgas Preview Panel 1](images/Dalgas_Preview_Panel_1.gif)  
+- **Horizontal mode:** Compare all masters side by side or preview only the instances defined in `Font Info > Instances`, rather than FontLab’s fixed interpolation steps. Regular interpolation follows the Weight axis; `Ctrl/Command` or `Alt/Option`+click on the Interpolation button shows registered instances across all axes.<br><br> 
+![Dalgas Preview Panel 1](images/Dalgas_Preview_Panel_1.gif)<br><br>
 ![Dalgas Preview Panel 2](images/Dalgas_Preview_Panel_2.gif)  
 
-- **Vertical mode:** Preview top-to-bottom typesetting beside the Glyph Window, with CJK Hangul, Kana, Han input, column breaks, adjustable size/spacing/leading, and resizable panel width. 
+- **Vertical mode:** Preview top-to-bottom typesetting beside the Glyph Window, with CJK Hangul, Kana, Han input, column breaks, adjustable size/spacing/leading, and resizable panel width.<br><br>
 ![Dalgas Preview Panel 3](images/Dalgas_Preview_Panel_3.gif)
 
 - **Text editing:** Ctrl+click (macOS Command+Click) inside the preview panel to enter text directly or exchange text with the Glyph Window. Zooming, panning, and guidelines are also supported.
