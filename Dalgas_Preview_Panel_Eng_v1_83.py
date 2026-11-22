@@ -1,9 +1,8 @@
 #FLM: Dalgas: Preview Panel
 """
 version_1.83
-FontLab 8: A preview panel attached to the Glyph Window.
+FontLab 8/9: A preview panel attached to the Glyph Window.
 Works in Horizontal mode (bottom of the Glyph Window) and Vertical mode (right edge of the Glyph Window).
-[WebBrowser BG Bypass Guard applied]
 
 [Features]
 - Ratio constant for the increment/decrement step of Size / Spacing / Leading: 	PP_SLIDER_ICON_STEP_RATIO = 0.02
