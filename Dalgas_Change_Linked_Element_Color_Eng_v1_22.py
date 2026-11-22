@@ -1,4 +1,4 @@
-#FLM: Cluade: 95_C_Change Linked Element Color
+#FLM: Dalgas: Change Linked Element Color
 """
 version_1.22
 FontLab 8: Changes the Fill Color of the selected shape and of every shape linked to it by Element Reference.
