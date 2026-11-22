@@ -1,6 +1,6 @@
-#FLM: Dalgas: Preview Panel
+#FLM: Dalgas: Preview Panel_exception
 """
-version_1.82
+version_1.83
 FontLab 8: A preview panel attached to the Glyph Window.
 Works in Horizontal mode (bottom of the Glyph Window) and Vertical mode (right edge of the Glyph Window).
 [WebBrowser BG Bypass Guard applied]
@@ -64,6 +64,9 @@ Works in Horizontal mode (bottom of the Glyph Window) and Vertical mode (right e
 - This script's settings are saved to Dalgas_Preview_Panel_Settings.json in the FontLab Scripts folder and applied on the next run.
   It detects the running FontLab version (8, 9 ...) and uses that version's Scripts folder (e.g. on Windows Documents/FontLab/FontLab 9/Scripts,
   on macOS ~/Library/Application Support/FontLab/FontLab 9/Scripts).
+
+
+[v1.83] FontLab 9의 열린 폰트 목록을 유효한 인덱스로만 읽어 반복 IndexError를 방지한다.
 
 
 [Guard] -------------------------------------------------------------------------------
@@ -140,7 +143,7 @@ if not getattr(_webbrowser, _BG_GUARD_ATTR, False):
 
 # ── app_name, app_version
 app_name = 'Dalgas | Preview Panel'
-app_version = 'v1.82'
+app_version = 'v1.83'
 PP_LOG = '[Preview Panel]'
 
 
@@ -3615,7 +3618,9 @@ def _pp_font_for_package(package):
         return None
     pid = _pp_package_id(package)
     try:
-        fonts = list(fl6.AllFonts() or [])
+        packages = fl6.AllFonts()
+        # fgPackages 순회를 끝내기 위한 범위 밖 인덱스 조회를 피한다.
+        fonts = [packages[index] for index in range(len(packages))] if packages is not None else []
     except Exception:
         fonts = []
     # takes the font at the remembered index again and checks the package id is the same (fgFont wrappers are not kept).
